@@ -80,6 +80,12 @@
     </div>
 
     <script>
+	    if ("serviceWorker" in navigator) {
+  navigator.serviceWorker.register("/sw.js").then(() => {
+    console.log("Service Worker zarejestrowany!");
+  });
+}
+
         const flagElement = document.getElementById('flag');
         const timeElement = document.getElementById('current-time'); // Miejsce na aktualny czas
         const dateElement = document.getElementById('current-date'); // Miejsce na aktualną datę
